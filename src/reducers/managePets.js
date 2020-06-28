@@ -1,7 +1,10 @@
 export let state;
 
 
-export function managePets(){
+export function managePets(state = { count: 0}, action){
+  switch (action.type) {
+    case 'INCREASE'
+  }
 }
 
 export function dispatch(){
@@ -25,9 +28,7 @@ export function render(){
       state = changeState(state, action)
       render()
     }
-     
     function render(){
       document.body.textContent = state.count
     }
-     
     dispatch({type: '@@INIT'})
