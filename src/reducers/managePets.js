@@ -1,9 +1,11 @@
 export let state;
 
 
-export function managePets(state = { count: 0}, action){
+export function managePets(state = { pets: []}, action){
   switch (action.type) {
-    case 'INCREASE'
+    case 'ADD_PET':
+      return { pets: [...state.pets, action.pet] )
+      case 'REMOVE_PET':
   }
 }
 
