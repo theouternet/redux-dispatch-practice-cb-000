@@ -25,13 +25,3 @@ export const render = () => {
   }).join(' ')
   container.innerHTML = `<ul>${petsList}</ul>`
 }
-
-
-      function dispatch(action){
-      state = changeState(state, action)
-      render()
-    }
-    function render(){
-      document.body.textContent = state.count
-    }
-    dispatch({type: '@@INIT'})
