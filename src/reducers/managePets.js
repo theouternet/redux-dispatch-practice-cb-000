@@ -18,8 +18,12 @@ export function dispatch(action){
   render()
 }
 
-export function render(){
-document.body.textContent
+export const render = () => {
+  let container = document.getElementById('container')
+  let petsList = state.pets.map((pet) => {
+    return `<li>${pet.name}</li>`
+  }).join(' ')
+  container.innerHTML = `<ul>${petsList}</ul>`
 }
 
 
