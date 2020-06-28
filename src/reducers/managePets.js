@@ -6,7 +6,7 @@ export function managePets(state = { pets: []}, action){
     case 'ADD_PET':
       return { pets: [...state.pets, action.pet] )
       case 'REMOVE_PET':
-        return { pets: state.pets.filter(pet => pet.id !==)
+        return { pets: state.pets.filter(pet => pet.id !== action.id) }
   }
 }
 
